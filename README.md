@@ -1,6 +1,9 @@
 # modern.IE VMs with Vagrant and Virtual Box
 ## How to use
 
+### Install dependencies
+Install both [vagrant](https://www.vagrantup.com/downloads.html) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) if you don't already have them.
+
 ### Clone the repository
 
 ```sh
