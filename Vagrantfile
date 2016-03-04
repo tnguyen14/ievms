@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
   config.trigger.before :up do
-    run "bash ./vagrant/box_check.sh #{ARGV[1]} #{ARGV[2]}"
+    run "bash ./box_check.sh #{ARGV[1]} #{ARGV[2]}"
   end
 
   # Every Vagrant development environment requires a box. You can search for
