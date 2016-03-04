@@ -34,7 +34,7 @@ if [[ $2 == "" ]]; then
 				break
 			fi
 		done
-		vagrant box add $fullBoxName $url 
+		vagrant box add $fullBoxName $boxURL 
 	else
 		echo "Box already exists"
 	fi
