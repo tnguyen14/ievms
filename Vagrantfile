@@ -10,36 +10,27 @@ Vagrant.configure(2) do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
   config.trigger.before :up do
-    run "bash ./box_check.sh #{ARGV[1]} #{ARGV[2]}"
+    run "bash ./add_box.sh #{ARGV[1]}"
   end
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://atlas.hashicorp.com/search.
-  config.vm.define "ie8", autostart: false do |ie8|
-    ie8.vm.box = "win7-ie8"
+  boxes = [
+    "ie6-xp",
+    "ie8-xp",
+    "ie7-vista",
+    "ie8-win7",
+    "ie9-win7",
+    "ie10-win7",
+    "ie11-win7",
+    "ie10-win8",
+    "ie11-win81",
+    "msedge-win10"
+  ]
+
+  boxes.each do |box|
+    config.vm.define box, autostart: false do |b|
+      b.vm.box = box
+    end
   end
-
-  config.vm.define "ie9", autostart: false do |ie9|
-    ie9.vm.box = "win7-ie9"
-  end
-
-  config.vm.define "ie10", autostart: false do |ie10|
-    ie10.vm.box = "win7-ie10"
-  end
-
-  config.vm.define "ie11", autostart: false do |ie11|
-    ie11.vm.box = "win7-ie11"
-  end
-
-  config.vm.define "win8ie10", autostart: false do |win8ie10|
-    win8ie10.vm.box = "win8-ie10"
-  end
-
-  config.vm.define "win81ie11", autostart: false do |win81ie11|
-    win81ie11.vm.box = "win81-ie11"
-  end
-
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
