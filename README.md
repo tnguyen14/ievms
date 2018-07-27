@@ -25,7 +25,7 @@ You can start any version of IE you'd like with just a simple command:
 
 ```sh
 :; vagrant up ie6-xp
-:; vagrant up ie6-xp
+:; vagrant up ie8-xp
 :; vagrant up ie7-vista
 :; vagrant up ie8-win7
 :; vagrant up ie9-win7
