@@ -37,3 +37,7 @@ You can start any version of IE you'd like with just a simple command:
 ```
 
 You might see many SSH authentication failure warnings, and eventually timed out. This is expected. The Windows VM with IE should already been opened via a GUI with Virtualbox.
+
+### Networking
+
+You can access the host's network from inside the VM by going to http://192.168.33.1
