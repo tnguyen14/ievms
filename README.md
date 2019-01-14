@@ -5,7 +5,7 @@ A simple way to start a Windows VM with IE/ Edge browser installed. Meant to be 
 ## How to use
 
 ### Install dependencies
-Install both [vagrant](https://www.vagrantup.com/downloads.html) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) if you don't already have them.
+Install both [vagrant](https://www.vagrantup.com/downloads.html) (minimum version 2.1.0) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) if you don't already have them.
 
 ### Clone the repository
 
@@ -16,7 +16,6 @@ Install both [vagrant](https://www.vagrantup.com/downloads.html) and [Virtualbox
 ### Install Vagrant plugins
 
 ```sh
-:; vagrant plugin install vagrant-triggers
 :; vagrant plugin install vagrant-vbguest
 ```
 

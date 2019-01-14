@@ -9,8 +9,8 @@ Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
-  config.trigger.before :up do
-    run "bash ./add_box.sh #{ARGV[1]}"
+  config.trigger.before :up do |trigger|
+    trigger.run = { path: "add_box.sh", args: ARGV[1] }
   end
 
   boxes = [
