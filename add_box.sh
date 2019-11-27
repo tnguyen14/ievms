@@ -58,7 +58,7 @@ if [ -f ./$boxesDir/$boxNameInUrl.vagrant ]; then
 	echo "Zip file for $boxName already exists"
 else
 	echo "Downloading image for $boxName from $boxURL. This may take a while."
-	wget -P $boxesDir -q $boxURL
+	wget --continue -P $boxesDir -q $boxURL
 fi
 
 echo "Unzipping..."
